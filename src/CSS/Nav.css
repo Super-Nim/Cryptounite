@@ -112,34 +112,9 @@ a:hover {
         margin: 0 2em;
     }
 
-    .bitcoin-container {
-        display:inline-flex;
-        overflow: hidden;
-        /* overflow-x: auto; */
-        width: 50%;
-        user-select: none;
     
-        /* box-sizing: border-box; /*WID?*/ 
-        /* flex-wrap: wrap; */
-        /* overflow-x: scroll; */
-        /* white-space: nowrap; WID? */
-    }
 
-    .bitcoin-container img {
-        width: 100%;
-        flex: 0 0 auto;
-    }
-
-    img {
-        margin: 0 auto;
-        width:50%;
-        height: 100%;
-    }
-
-    .bitcoin-container::-webkit-scrollbar {
-        /* width: 5em;
-        height: 1em;*/
-    }
+    
 }
 
 @media screen and (max-width: 900px) {
@@ -199,35 +174,7 @@ a:hover {
         transform: translateY(16px);
     }
 
-    /* .hero {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .hero > h1 {
-        margin: 0 100%;
-    }
-
-    .donate {
-        position: static;
-        
-    }
-
-    .receive {
-        position: static;
-    }
-
-    .don-rec {
-        margin: 1rem;
-        align-self: center;
-    }
-
-    .don-rec::before {
-        display: none;
-    } */
-
+    
 
 }
 

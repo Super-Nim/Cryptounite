@@ -99,7 +99,7 @@ footer li {
 @media screen and (max-width: 1000px) {
 
     .container {
-        grid-template-rows: 2.5rem 27.5rem 7rem 30rem;
+        grid-template-rows: 2.5rem 27.5rem 17rem 30rem;
     }
     .logo {
         margin-left: -13em;
@@ -111,10 +111,12 @@ footer li {
     }
 
     .bitcoin-container {
-        display:inline-flex;
-        overflow: hidden;
+        display: grid;
+        grid-template-rows: 5rem 5rem 5rem;
+        
+        /* overflow: hidden; */
         /* overflow-x: auto; */
-        width: 50%;
+        width: 40%;
         user-select: none;
     
         /* box-sizing: border-box; /*WID?*/ 
@@ -123,15 +125,14 @@ footer li {
         /* white-space: nowrap; WID? */
     }
 
-    .bitcoin-container img {
-        width: 100%;
-        flex: 0 0 auto;
-    }
+
 
     img {
         margin: 0 auto;
-        width:50%;
-        height: 100%;
+        
+        width: 80%;
+        height: 30%;
+        min-height: 30%;
     }
 
     .bitcoin-container::-webkit-scrollbar {
@@ -295,6 +296,8 @@ footer li {
     }
 
 }
+
+/*Media query for @400px very small screens*/
 
 
 

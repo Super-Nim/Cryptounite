@@ -96,12 +96,13 @@ footer li {
         text-align: center;
     }
 
-    .socialCopyright {
+    .social-copyright {
         display: flex;
         flex-wrap: wrap;
         justify-self: center;
         
         flex-direction: column;
+        margin-top: 0.5rem;
 
     }
 
@@ -112,11 +113,13 @@ footer li {
     .support {
         margin: 0;
         grid-area: support;
+        transform: translateY(-1rem);
     }
 
     .community {
         margin: 0;
         grid-area: community;
+        transform: translateY(-1rem);
     }
 
     h3 {
@@ -134,6 +137,7 @@ footer li {
     .copyright {
         display: flex;
         margin: 0 auto;
+        transform: translateY(6rem);
 
     }
 
