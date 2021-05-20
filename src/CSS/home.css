@@ -17,7 +17,7 @@ html, body {
 
 .container {
     display: grid;
-    grid-template-rows: 5rem 2.5rem 27.5rem 7rem 27.5rem 10rem;
+    grid-template-rows: /*5rem*/ 2.5rem 27.5rem 7rem 27.5rem /*10rem*/;
     grid-template-areas: 
     "nav"
     "banner"
@@ -239,5 +239,48 @@ img {
     height: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+
+    .container {
+        grid-template-rows: 2.5rem 27.5rem 7rem 30rem;
+    }
+    .logo {
+        margin-left: -13em;
+        margin-right: 5em;
+    }
+
+    .nav-links {
+        margin: 0 2em;
+    }
+
+    .bitcoin-container {
+        display:inline-flex;
+        overflow: hidden;
+        /* overflow-x: auto; */
+        width: 50%;
+        user-select: none;
+    
+        /* box-sizing: border-box; /*WID?*/ 
+        /* flex-wrap: wrap; */
+        /* overflow-x: scroll; */
+        /* white-space: nowrap; WID? */
+    }
+
+    .bitcoin-container img {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    img {
+        margin: 0 auto;
+        width:50%;
+        height: 100%;
+    }
+
+    .bitcoin-container::-webkit-scrollbar {
+        /* width: 5em;
+        height: 1em;*/
+    }
+}
 
 

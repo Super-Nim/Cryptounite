@@ -15,7 +15,7 @@ html, body {
 .grid-container {
     display: grid;
     flex-direction: column;
-    grid-template-rows: 5rem 20rem 5rem 10rem;
+    grid-template-rows:  5rem 30rem ;
     grid-template-areas: 
     "header"
     "form"
@@ -34,8 +34,9 @@ header {
 }
 
 
-.logo {
+/* .logo {
     /* grid-area: logo; */
+/*
     justify-self: flex-start;
     border: none;
     --width: 10em;
@@ -52,15 +53,15 @@ header {
     cursor: pointer;
     margin-right: 2em;
     /* margin-left: -25em;
-    margin-right: 10em; */
-}
-
+    margin-right: 10em; 
+}*/
+/*
 .logo::before {
     content: '';
     border-radius: 5em;
     position: absolute;
     top: 50%; /*centers ::before onto logo*/
-    left: 50%;
+    /*left: 50%;
     z-index: -1;
     background-color: var(--blue);
     transform: rotate(-3.5deg) translate(-50%, -70%);
@@ -79,7 +80,7 @@ header {
     border: none;
     background: var(--green);
     transform: rotate(3.5deg) translate(-80%, 14%);
-}
+} */
 
 h1 {
     /* margin-left: -5em; */
@@ -88,12 +89,11 @@ h1 {
     
 }
 
-.menu-btn {
+/* .menu-btn {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-right: 0rem; */
     width: 4rem;
     height: 4rem;
     cursor: pointer;
@@ -129,7 +129,7 @@ h1 {
 
 .menu-burger::after {
     transform: translateY(16px);
-}
+} */
 
 form {
     grid-area: form;

@@ -1,0 +1,233 @@
+nav {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.logo {
+    border: none;
+    --width: 10em;
+    --height: 2.5em;
+    min-height: 2rem;
+    min-width: 10rem; 
+    border-radius: 5em;
+    background: white;
+    color: var(--blue);
+    letter-spacing: 0.2em;
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: -20em;
+    margin-right: 10em;
+    
+}
+
+.logo::before {
+    content: '';
+    border-radius: 5em;
+    position: absolute;
+    top: 50%; /*centers ::before onto logo*/
+    left: 50%;
+    z-index: -1;
+    background-color: var(--blue);
+    transform: rotate(-3.5deg) translate(-50%, -70%);
+    min-width: calc(var(--width) + 3em);
+    min-height: calc(var(--height) - 1.1em);
+    border: 6px solid var(--blue);
+}
+
+.logo::after {
+    content: '';
+    z-index: -2;
+    border-radius: 5em;
+    position: absolute;
+    min-width: calc(var(--width) + 3em);
+    min-height: calc(var(--height) - 0.5em);
+    border: none;
+    background: var(--green);
+    transform: rotate(3.5deg) translate(-90%, 15%);
+
+}
+
+.nav-links {
+    margin: 0 4em;
+    list-style: none;
+    font-weight: bold;
+    
+}
+
+.nav-links {
+    margin: 0 4em;
+    list-style: none;
+    font-weight: bold;
+    
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+    transition: all .3s ease-in-out;
+}
+
+li {
+    list-style: none;
+    
+}
+
+a:hover {
+    color: var(--green);
+}
+
+.sign-up {
+    border: 2px solid black;
+    min-height: 2em;
+    width: 6em;
+    border-radius: 5em;
+    font-size: 1em; /*1em = 16px*/
+    background: white;
+    color: var(--blue);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: -22em;
+}
+
+.sign-up:hover, .sign-up:focus {
+    background: var(--blue);
+    color: white;
+}
+
+@media screen and (max-width: 1060px) {
+
+    .logo {
+        margin-left: -13em;
+        margin-right: 5em;
+    }
+
+    .nav-links {
+        margin: 0 2em;
+    }
+
+    .bitcoin-container {
+        display:inline-flex;
+        overflow: hidden;
+        /* overflow-x: auto; */
+        width: 50%;
+        user-select: none;
+    
+        /* box-sizing: border-box; /*WID?*/ 
+        /* flex-wrap: wrap; */
+        /* overflow-x: scroll; */
+        /* white-space: nowrap; WID? */
+    }
+
+    .bitcoin-container img {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    img {
+        margin: 0 auto;
+        width:50%;
+        height: 100%;
+    }
+
+    .bitcoin-container::-webkit-scrollbar {
+        /* width: 5em;
+        height: 1em;*/
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .logo {
+        margin-left: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .sign-up {
+        display: none;
+    }
+
+    .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -2rem;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+    }
+
+    .menu-burger {
+        grid-area: nav;
+        display: flex;
+        cursor: pointer;
+        width: 50px;
+        height: 6px;
+        background: var(--blue);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255,101,47,0.2);
+        transition: all .5s ease-in-out;
+    }
+
+    .menu-burger::before,
+    .menu-burger::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background: var(--blue);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255,101,47,0.2);
+        transition: all .5s ease-in-out;
+    }
+
+    .menu-burger::before {
+        transform: translateY(-16px);
+    }
+    
+    .menu-burger::after {
+        transform: translateY(16px);
+    }
+
+    /* .hero {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero > h1 {
+        margin: 0 100%;
+    }
+
+    .donate {
+        position: static;
+        
+    }
+
+    .receive {
+        position: static;
+    }
+
+    .don-rec {
+        margin: 1rem;
+        align-self: center;
+    }
+
+    .don-rec::before {
+        display: none;
+    } */
+
+
+}
+
