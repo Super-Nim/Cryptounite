@@ -1,6 +1,5 @@
 import './CSS/home.css'
 import './CSS/prototypeSecondHalf.css'
-import SignUp from './SignUp'
 import React from 'react'
 import {IconContext} from 'react-icons'
 import {FaFacebook} from 'react-icons/fa'
@@ -10,11 +9,7 @@ import {FaLinkedin} from 'react-icons/fa'
 import { useHistory } from 'react-router-dom'
 
 const Home = () => {
-    const history = useHistory()
-
-    const routeChange = () => {
-        history.push('/signup')
-    }
+    
     return (
     <IconContext.Provider value={{ size: "2em"}}>
     <div className="App">
@@ -27,7 +22,7 @@ const Home = () => {
         <h2 className="banner-text">Join the community and sign up today</h2>
     </div>
     <div className="hero">
-        <h1>"EVERYONE HELPING SOMEONE"</h1>
+        <h1 class="homeh1">"EVERYONE HELPING SOMEONE"</h1>
         <button className="don-rec donate">Donate</button>
         <button className="don-rec receive">Receive</button>
     </div>

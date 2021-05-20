@@ -17,14 +17,12 @@ html, body {
 
 .container {
     display: grid;
-    grid-template-rows: /*5rem*/ 2.5rem 27.5rem 7rem 27.5rem /*10rem*/;
+    grid-template-rows:  2.5rem 27.5rem 7rem 27.5rem ;
     grid-template-areas: 
-    "nav"
     "banner"
     "hero"
     "crypto-icons"
-    "the-how"
-    "footer";
+    "the-how";
     justify-items: center;
     
 }
@@ -139,24 +137,26 @@ a:hover {
 
 
 .hero {
-    display: grid;
+    /* display: grid; */
     flex-wrap: wrap;
     background-image: url("../CSS/crypto-unite-web-banner.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    grid-template-areas: 
+    /* grid-template-areas: 
     "title title"
-    "donate receive";
+    "donate receive"; */
     /* flex-direction: column; center text */
     justify-self: stretch; 
     
 }
 
-h1 {
+.homeh1 {
+    margin: 5rem auto;
     text-align: center;
     color: var(--green);
     grid-area: title;
     align-self: center; 
+    
         
 }
 
@@ -165,18 +165,19 @@ h1 {
 .donate {
     grid-area: donate;
     position: relative;
-    left:30%;
+    left:20%;
 
 }
 
 .receive {
     grid-area: receive;
     position: relative;
-    right: 30%;
+    right: 20%;
     
 }
 
 .don-rec {
+    
     --width: 10em;
     --height: 3em;
     
