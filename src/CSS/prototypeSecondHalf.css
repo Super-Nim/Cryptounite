@@ -99,7 +99,7 @@ footer li {
 @media screen and (max-width: 1000px) {
 
     .container {
-        grid-template-rows: 2.5rem 27.5rem 17rem 30rem;
+        grid-template-rows: 27.5rem 17rem 30rem;
     }
     .logo {
         margin-left: -13em;

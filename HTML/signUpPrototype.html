@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/signUpCss.css">
+    <title>Sign Up</title>
+</head>
+<body class='grid-container'>
+    <header>
+        <button class='logo' onclick="location.href='/'"> cryptounite</button>
+        <h1>Sign Up</h1>
+        <div class="menu-btn">
+            <div class="menu-burger"></div>
+        </div>
+    </header>
+    
+    <form method="POST" action="/sign-up">
+        <label for="name"><b>Name:</b></label>
+        <input type="text" name="name" placeholder="Enter Name">
+
+        <label for="Email"><b>Email:</b></label>
+        <input type="text" name="email" placeholder="Enter Email">
+
+        <label for="country"><b>Select Country:</b></label>
+        <input type="list" name="country" id="country">
+        <datalist id="countries">
+            <option value="Bub"></option>
+            <option value="Dub"></option>
+        </datalist>
+
+        <label for="region"><b>Select Region</b></label>
+        <input list="regions" name="region" id="region">
+        <datalist id="regions">
+            <option value="Bubelbo"></option>
+            <option value="Dubelbo"></option>
+        </datalist>
+        <label for="wallet"><b>Wallet address</b></label>
+        <input type="text" name="wallet">
+
+        <div class="submit-container">
+            <button class="submit-btn">Submit</button>
+        </div>
+    </form>
+
+    
+
+</body>
+</html>
