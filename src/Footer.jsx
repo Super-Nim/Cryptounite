@@ -31,10 +31,10 @@ const Footer = () => {
         </div>
         <div className="social-copyright">
             <div className="social">
-            <FaFacebook/>
-            <FaInstagram/>
-            <FaTwitter/>
-            <FaLinkedin/>
+            <button><FaFacebook/></button>
+            <button><FaInstagram/></button>
+            <button><FaTwitter/></button>
+            <button><FaLinkedin/></button>
         </div>
             <div className="copyright">
                 <small>2021 Cryptounite, All Rights Reserved</small>

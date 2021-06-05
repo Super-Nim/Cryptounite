@@ -12,6 +12,14 @@ footer {
 footer li {
     margin: 0.4rem 0;
 }
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--blue);
+}
 .support {
     grid-area: support;
     margin-left: 2rem;
@@ -23,9 +31,7 @@ footer li {
     margin: 0 0 0.6rem 0;
     font-size: 1rem;
 }
-.support a {
-    color: white;
-}
+
 
 
 .community {
@@ -40,9 +46,6 @@ footer li {
     font-size: 1rem;
 }
 
-.community a {
-    color: white;
-}
 
 .social-copyright {
     grid-area: social-copyright;
@@ -60,9 +63,24 @@ footer li {
     margin-right: 2rem;
 }
 
-.social a {
-    color: #AEADAD;
+.social > button {
+   margin: 0 0.1rem;
+   border-radius: 50%;
+   color: white;
+   border: none;
+   background-color: #AEADAD;
+   border-color: #AEADAD;
+   cursor: pointer;
+   transition: all .3s ease-in-out;
 }
+
+.social > button:hover {
+    color: #d3d3d3;
+}
+
+/* .social a {
+    color: #AEADAD;
+} */
 
 .copyright {
     grid-area: copyright;

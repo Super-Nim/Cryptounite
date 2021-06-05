@@ -114,6 +114,11 @@ h1 {
     user-select: none;
 }
 
+.grid2 img:nth-child(1){ 
+    height: 55%;
+}
+
+
 .grid3 {
     grid-area: grid3;
 }
@@ -131,12 +136,43 @@ h1 {
     user-select: none;
 
 }
+.grid4 {
+    background-color: #AEADAD;
+    color: white;
+    text-align: left;
+}
+
+.grid4 * {
+    margin-left: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
 
 
 @media screen and (max-width: 1111px) {
     .grid2 img {
         width: 30%;
         height: 30%;
+    }
+
+    .grid2 img:nth-child(1) {
+        margin-top: 2rem;
+        height: 40%;
+    }
+
+    .grid2 img:nth-child(2) {
+        margin-top: 1.7rem;
+        height: 53%;
+        width: 30%;
+    
+    }
+    
+    .grid2 img:nth-child(3) {
+        margin-top: 1.7rem;
+        height: 55%;
+    
     }
 }
 
