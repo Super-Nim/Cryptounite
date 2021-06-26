@@ -8,6 +8,7 @@ import Donate from './Donate'
 import Home from './Home'
 import Nav from './Nav'
 import Footer from './Footer'
+import RegistrationSuccessPage from './RegistrationSuccessPage'
 import { Router, Route, Switch } from 'react-router-dom'
 
 
@@ -15,13 +16,16 @@ function App() {
  
   return (
       <div className="App">
+     
         <Nav/>
         <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/signup' component ={SignUp} />
         <Route exact path='/donate' component={Donate}/>
+        <Route exact path='/registrationSuccess' component={RegistrationSuccessPage}/>
         </Switch>
         <Footer/>
+        
       </div>
     
   );

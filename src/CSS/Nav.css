@@ -126,6 +126,7 @@ a:hover {
 
     
 
+
     
 }
 
@@ -202,6 +203,10 @@ a:hover {
 
     .menu-burger-close.menu-burger::after {
         transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    a {
+        color: white;
     }
 
     

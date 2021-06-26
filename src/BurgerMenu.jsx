@@ -1,23 +1,24 @@
 import React from 'react'
 import './CSS/burgerMenu.css'
 import { BurgerMenuData } from './BurgerMenuData'
+import { Link } from 'react-router-dom'
 
 
-const BurgerMenu = () => {
+const BurgerMenu = (props) => {
+    // make menu togglable 
 
-
-
+    
     return (
         <div className="burger-active">
-            <h1>POOOOOOO</h1>
+            
             <ul>
             {BurgerMenuData.map((item, index) => {
             return (
                 <li key={index} className={item.class}>
-                    <link to={item.path}>
+                    <Link to={item.path}>
                         {item.icon}
                         <span>{item.title}</span>
-                    </link>
+                    </Link>
                 </li>
             )
             })} 

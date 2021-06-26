@@ -20,7 +20,7 @@ export const BurgerMenuData = [
     },
     {
         title: 'Our Mission',
-        path: '/',
+        path: '/donate',
         icon: <GoIcons.GoGlobe/>,
         class: 'nav-text'
     },{

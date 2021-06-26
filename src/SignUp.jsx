@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 import './CSS/signUpCss.css'
+import { BsExclamationTriangleFill } from 'react-icons/bs';
+import { useHistory } from 'react-router-dom'
 
 const SignUp = () => {
+ const history = useHistory()
 
    const [firstName, setfirstName] = useState('')
    const [lastName, setLastName] = useState('')
@@ -10,6 +15,9 @@ const SignUp = () => {
    const [country, setCountry] = useState('')
    const [region, setRegion] = useState('')
    const [wallet, setWallet] = useState('')
+   
+   const [emailError, setEmailError] = useState(false)
+   const [emailExists, setEmailExists] = useState(false)
 
    const onChangefirstName = (e) => {
        setfirstName( e.target.value )
@@ -30,7 +38,16 @@ const SignUp = () => {
        setWallet( e.target.value)
    }
 
-   const onSubmit = (e) => {
+   const validateEmail = (email) => {
+    
+    if (!(/\S+@\S+\.\S+/.test(email))) {
+        setEmailError(true)
+        return true;
+    }
+    return false;
+   }
+
+   const onSubmit = async (e) => {
        e.preventDefault()
        const newCustomer = {
            firstName: firstName,
@@ -40,25 +57,66 @@ const SignUp = () => {
            region: region,
            wallet: wallet
        }
-    
-       axios.put('http://localhost:5000/customer/update', newCustomer)
-        .then(res => {
-            console.log("status: ", res.status)
-            setfirstName('')
-            setLastName('')
-            setEmail('')
-            setCountry('')
-            setRegion('')
-            setWallet('')
-        })
-        .catch(err => {console.log(err, "no duplicates")})
-        
-   }
 
+       const { data } = await axios.get('http://localhost:5000/customer/')
+       const emailExists = await data.filter( obj => 
+        obj.email === email)
+        console.log(emailExists)
+        if (emailExists.length !== 0) {
+            toast('Email address already exists')
+            setEmailExists(true)
+            setEmailError(false)
+            return
+        } else if (validateEmail(email)) {
+            toast('Please enter a valid email')
+            setEmailError(true)
+            setEmailExists(false)
+            return
+        } else {
+            axios.post('http://localhost:5000/customer/add', newCustomer)
+            .then(res => {
+                console.log("status: ", res.status)
+                setfirstName('')
+                setLastName('')
+                setEmail('')
+                setCountry('')
+                setRegion('')
+                setWallet('')
+            })
+            return history.push('/registrationSuccess')
+        }
+    }
+        
+   
+   
+//    const promiseDoe = () => {
+//        return new Promise((resolve, reject) => {
+//            if (!email.includes('@')) {
+//                reject({
+//                    message:'Incorrect email'
+//                })
+//            }
+//            else {
+//                resolve({
+//                    message:'Correct email inputted'
+//                })
+//            }
+//        })
+//    }
+//     useEffect(() => {
+//         promiseDoe().then((message) => {
+//             console.log('success ' + message)
+//         }).catch((err) => {
+//             console.log(err.message)
+//         })
+        
+
+//     }, [email])
 
     return (
     <div className='grid-container'>
-        <header>    
+        <header>  
+            <ToastContainer/>  
             <h1>Sign Up</h1>          
         </header>  
         <form onSubmit={onSubmit}>
@@ -73,6 +131,8 @@ const SignUp = () => {
             <label htmlFor="Email"></label>
             <input type="text" name="email" 
             onChange={onChangeEmail} placeholder="Enter Email"/>
+            {emailError && <p style={{color:"red", fontSize:"0.7rem", margin:"0"}}>invalid email</p>}
+            {emailExists && <p style={{color:"red", fontSize:"0.7rem", margin:"0"}}>email exists</p>}
 
             <label htmlFor="country"></label>
             <input type="list" name="country" placeholder="Enter Country"
@@ -109,5 +169,6 @@ const SignUp = () => {
     </div>
     );
 }
+
 
 export default SignUp

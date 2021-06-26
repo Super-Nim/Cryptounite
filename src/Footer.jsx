@@ -10,7 +10,7 @@ const Footer = () => {
 
 
     return (
-        <IconContext.Provider value={{ size: "2em"}}> 
+        <IconContext.Provider value={{ size: "2em", borderRadius:"50%" }}> 
         <footer>
         <div className="support">
            <h3>SUPPORT</h3>

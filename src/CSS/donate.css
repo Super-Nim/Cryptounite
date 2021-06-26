@@ -19,7 +19,7 @@ html, body {
 .grid1 {
     grid-area: grid1;
     display: grid;
-    background-image: url("../donateBG.png");
+    background-image: url("../src-images/donateBG.png");
     background-size: cover;
     background-repeat: no-repeat;
     flex-wrap: wrap;
@@ -112,6 +112,10 @@ h1 {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
 .grid2 img:nth-child(1){ 
@@ -121,12 +125,24 @@ h1 {
 
 .grid3 {
     grid-area: grid3;
+    display: inline-flex;
+
+
+}
+
+.grid3 * {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    
 }
 
 .grid3 img {
-    margin-top: 2rem;
-    height: 50%;
-    width: 50%;
+    /* margin-top: 2rem; */
+    /* margin: 2rem 0.25rem 0rem 0.25rem; */
+    height: 40%; /*30%*/
+    width: 50%; /*15%*/
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -134,7 +150,17 @@ h1 {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    cursor: pointer;
 
+}
+
+.grid3 div {
+    margin-top: 2rem;
+    width:50%;
+}
+
+.grid3 ul {
+    left: 50%;
 }
 .grid4 {
     background-color: #AEADAD;
