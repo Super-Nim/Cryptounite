@@ -5,6 +5,7 @@ import axios from 'axios'
 import './CSS/signUpCss.css'
 import { BsExclamationTriangleFill } from 'react-icons/bs';
 import { useHistory } from 'react-router-dom'
+import Password from './Password'
 
 const SignUp = () => {
  const history = useHistory()
@@ -15,6 +16,15 @@ const SignUp = () => {
    const [country, setCountry] = useState('')
    const [region, setRegion] = useState('')
    const [wallet, setWallet] = useState('')
+
+   const destruc = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        country: country,
+        region: region,
+        wallet: wallet
+   }
    
    const [emailError, setEmailError] = useState(false)
    const [emailExists, setEmailExists] = useState(false)
@@ -47,6 +57,8 @@ const SignUp = () => {
     return false;
    }
 
+   const [customerDetails, setCustomerDetails] = useState([])
+
    const onSubmit = async (e) => {
        e.preventDefault()
        const newCustomer = {
@@ -58,10 +70,12 @@ const SignUp = () => {
            wallet: wallet
        }
 
+    //    setCustomerDetails(newCustomer)
+
        const { data } = await axios.get('http://localhost:5000/customer/')
        const emailExists = await data.filter( obj => 
         obj.email === email)
-        console.log(emailExists)
+        console.log(newCustomer)
         if (emailExists.length !== 0) {
             toast('Email address already exists')
             setEmailExists(true)
@@ -73,47 +87,29 @@ const SignUp = () => {
             setEmailExists(false)
             return
         } else {
-            axios.post('http://localhost:5000/customer/add', newCustomer)
-            .then(res => {
-                console.log("status: ", res.status)
-                setfirstName('')
-                setLastName('')
-                setEmail('')
-                setCountry('')
-                setRegion('')
-                setWallet('')
-            })
-            return history.push('/registrationSuccess')
+            // axios.post('http://localhost:5000/customer/add', newCustomer)
+            // .then(res => {
+            //     console.log("status: ", res.status)
+            //     setfirstName('')
+            //     setLastName('')
+            //     setEmail('')
+            //     setCountry('')
+            //     setRegion('')
+            //     setWallet('')
+            // })
+            // return history.push('/signup/password',
+            //     newCustomer)
+                // How to pass props to Password.jsx ?
+            // const { newCustomer } = props
+            // const { firstName } = newCustomer
+            return setPage(true)
         }
     }
-        
-   
-   
-//    const promiseDoe = () => {
-//        return new Promise((resolve, reject) => {
-//            if (!email.includes('@')) {
-//                reject({
-//                    message:'Incorrect email'
-//                })
-//            }
-//            else {
-//                resolve({
-//                    message:'Correct email inputted'
-//                })
-//            }
-//        })
-//    }
-//     useEffect(() => {
-//         promiseDoe().then((message) => {
-//             console.log('success ' + message)
-//         }).catch((err) => {
-//             console.log(err.message)
-//         })
-        
-
-//     }, [email])
+    const [nextPage, setPage] = useState(false)
 
     return (
+    <React.Fragment>
+    { nextPage ? ( <Password {...destruc}/> ) : (
     <div className='grid-container'>
         <header>  
             <ToastContainer/>  
@@ -164,9 +160,10 @@ const SignUp = () => {
                 <button class="socialSignIn Tw-login">Twitter</button>
                 <button class="socialSignIn Gm-login">Gmail</button>
             </div>
-        </div>
+        </div> 
+    </div> ) }
 
-    </div>
+    </React.Fragment>
     );
 }
 
