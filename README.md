@@ -43,14 +43,30 @@ Authentication code for front end and back end has been implemented. For example
 Success! Once an created had been created, the user will be redirected to the home page, but logged in.
 
 
-### Donation page (unfinished)
+### Donation page (Figma)
 
-This page will explain the series of transaction processes that will occur on the blockchain (in laymans terms).
+Current draft of the donation page via Figma. This page will explain the series of transaction processes that will occur on the blockchain (in laymans terms).
 
-![appDonatePage](https://user-images.githubusercontent.com/64858288/125202353-24b2ae80-e26b-11eb-9125-2e046e37a7dc.png)
+Javascript events will be used to trigger the next frame.
+
+![appDonateFigma](https://user-images.githubusercontent.com/64858288/125203990-eae5a600-e272-11eb-87bd-bc221dd535b7.png)
 
 
+## Skills and Stack 
 
+Having used primary JSX (HTML/JS) with pure CSS, I have learnt a lot about the mindset shift required for working with a react.js app.
+
+The swift component rendering, as opposed to the entire page, provides a seamless user experience. 
+
+The total list of tech stack:
+
+* HTML
+* CSS
+* JS/JSX
+* Node/Express.js
+* Mongoose/MongoDB
+* Figma - UX/UI design 
+* EVM - Truffle, web3, Ganache
 
 
 
