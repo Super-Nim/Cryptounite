@@ -23,7 +23,7 @@ This will incorporate the Ethereum Virtual Machine to deploy the application, on
 ### Homepage
 
 ![appDemo1](https://user-images.githubusercontent.com/64858288/125200053-fe881100-e260-11eb-8b85-783ab14b0761.png)
-![appDonatePage](https://user-images.githubusercontent.com/64858288/125202431-722f1b80-e26b-11eb-9af3-99b85ca40387.png)
+![appDemo2](https://user-images.githubusercontent.com/64858288/125202442-84a95500-e26b-11eb-9351-3602cf4feafb.png)
 
 The "the How" section will embed a short animated infographic video to explain the DApp.
 
