@@ -36,7 +36,7 @@ A MongoDB database is used to store customer accounts using a REST API.
 
 Authentication code for front end and back end has been implemented. For example, the below image shows what is required for a password.
 
-![appPassword](https://user-images.githubusercontent.com/64858288/125202149-2d56b500-e26a-11eb-9e47-a3316a61ec99.png =250x250)
+<img src="https://user-images.githubusercontent.com/64858288/125202149-2d56b500-e26a-11eb-9e47-a3316a61ec99.png" width="80" height="80/> 
 
 ![appSuccess](https://user-images.githubusercontent.com/64858288/125202239-950d0000-e26a-11eb-8c6a-774b7f52a247.png)
 
