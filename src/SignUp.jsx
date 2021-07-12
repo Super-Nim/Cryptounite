@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom'
 import Password from './Password'
 
 const SignUp = () => {
- const history = useHistory()
+   const history = useHistory()
 
    const [firstName, setfirstName] = useState('')
    const [lastName, setLastName] = useState('')
@@ -87,21 +87,6 @@ const SignUp = () => {
             setEmailExists(false)
             return
         } else {
-            // axios.post('http://localhost:5000/customer/add', newCustomer)
-            // .then(res => {
-            //     console.log("status: ", res.status)
-            //     setfirstName('')
-            //     setLastName('')
-            //     setEmail('')
-            //     setCountry('')
-            //     setRegion('')
-            //     setWallet('')
-            // })
-            // return history.push('/signup/password',
-            //     newCustomer)
-                // How to pass props to Password.jsx ?
-            // const { newCustomer } = props
-            // const { firstName } = newCustomer
             return setPage(true)
         }
     }
