@@ -18,7 +18,7 @@ This will incorporate the Ethereum Virtual Machine to deploy the application, on
 * Create a basic profile page
 * Fix CSS media queries at very small & big screen sizes
 
-### Screenshots and design
+## Screenshots and design
 
 ### Homepage
 
@@ -34,9 +34,11 @@ The "the How" section will embed a short animated infographic video to explain t
 
 A MongoDB database is used to store customer accounts using a REST API. 
 
-Authentication code for front end and back end has been implemented. For example, the below image shows what is required for a password.
+Authentication code for front end and back end has been implemented. See backend/customer.crypto.js and src/password.jsx. 
 
-<img src="https://user-images.githubusercontent.com/64858288/125202149-2d56b500-e26a-11eb-9e47-a3316a61ec99.png" width="80" height="80/> 
+For example, the below image shows what is required for a password.
+
+![appPassword](https://user-images.githubusercontent.com/64858288/125204613-01d9c780-e276-11eb-837b-8e59e577fe08.png)
 
 ![appSuccess](https://user-images.githubusercontent.com/64858288/125202239-950d0000-e26a-11eb-8c6a-774b7f52a247.png)
 
