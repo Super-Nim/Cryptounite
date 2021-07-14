@@ -36,10 +36,6 @@ router.get('/:firstName', authenticateToken, (req, res) => {
        firstName: req.query.firstName
    })
 
-    // CustomerModel.find()
-    // .then(customer => res.json(customer))
-    // .then(res.json(customer.filter( customer => customer.firstName === req.customer.firstName)))
-    // .catch(err => res.status(400).json(err))
 
 })
 

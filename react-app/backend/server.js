@@ -15,7 +15,7 @@ app.use((req, res, next) => {
       return res.sendStatus(200); // to deal with chrome sending an extra options request
     }
   
-    next(); // call next middleware in line
+    next(); 
   });
 
 const uri = process.env.ATLAS_URI

@@ -35,7 +35,7 @@ const CustomerSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        select: true, // false for real application
+        select: true, // select false for real application
         trim: true
     }
 
