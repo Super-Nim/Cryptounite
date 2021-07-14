@@ -1,0 +1,29 @@
+{
+  "name": "react-intro",
+  "version": "1.0.0",
+  "description": "Learning Full Stack dev + blockchain dev, through my own original HTML/CSS/JS project. Now, using MERN stack + Ethereum Virtual Machine.",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "nodemon": "^2.0.12",
+    "react-hook-form": "^7.9.0",
+    "react-router-dom": "^5.2.0",
+    "react-toastify": "^7.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Super-Nim/react-crypto-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Super-Nim/react-crypto-1/issues"
+  },
+  "homepage": "https://github.com/Super-Nim/react-crypto-1#readme"
+}
