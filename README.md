@@ -1,5 +1,4 @@
 # Cryptounite
-Creating a React.js app with EVM integration
 
 This contains the current backend filed for the app.
 
