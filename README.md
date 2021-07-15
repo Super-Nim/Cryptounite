@@ -70,5 +70,8 @@ The total list of tech stack:
 * Figma - UX/UI design 
 * EVM - Truffle, web3, Ganache
 
+### Note (12/07/21):
+
+Accidentally deleted some files with git --reset hard (rookie mistake I know), so the most recent files are missing but I will recreate them soon
 
 
