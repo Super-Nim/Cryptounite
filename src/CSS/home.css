@@ -5,26 +5,28 @@ html, body {
     width: infinite;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: 'Ubuntu', Arial;
 }
 
 :root {
     --blue: #00ccff;
     --green: #32CD32;
+    --gray: #AEADAD;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 
 }
 
 .container {
     display: grid;
-    grid-template-rows: /*5rem*/ 2.5rem 27.5rem 7rem 27.5rem /*10rem*/;
+    grid-template-rows: 27.5rem 7rem 27.5rem ;
     grid-template-areas: 
-    "nav"
-    "banner"
     "hero"
     "crypto-icons"
-    "the-how"
-    "footer";
+    "the-how";
     justify-items: center;
     
 }
@@ -124,39 +126,33 @@ a:hover {
     color: white;
 }
 
-.banner { /*can make banner bigger later*/
-    display: flex;
-    align-content: flex-start;
-    align-self: flex-start;
-    justify-self: stretch;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 0.8rem;
-    margin: 0;
-    background: var(--blue);
-}
-
 
 .hero {
     display: grid;
     flex-wrap: wrap;
+    width: 100%;
     background-image: url("../CSS/crypto-unite-web-banner.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    justify-content: center;
+
     grid-template-areas: 
     "title title"
-    "donate receive";
-    /* flex-direction: column; center text */
-    justify-self: stretch; 
+    "donate receive"; 
+    justify-self: stretch;
+     /* flex-direction: column; center text
+    justify-self: stretch;  */
     
 }
 
-h1 {
-    text-align: center;
+.homeh1 {
+    /* margin: 3rem auto; */
+    /* text-align: center; */
     color: var(--green);
     grid-area: title;
     align-self: center; 
+    justify-self: center;
+    
         
 }
 
@@ -164,19 +160,24 @@ h1 {
 
 .donate {
     grid-area: donate;
+    /* grid-area: donate;
     position: relative;
-    left:30%;
+    left:20%; */
+  
 
 }
 
 .receive {
     grid-area: receive;
-    position: relative;
-    right: 30%;
+    /* grid-area: receive; */
+    /* position: relative;
+    right: 20%; */
+   
     
 }
 
 .don-rec {
+    
     --width: 10em;
     --height: 3em;
     
@@ -242,7 +243,7 @@ img {
 @media screen and (max-width: 1000px) {
 
     .container {
-        grid-template-rows: 2.5rem 27.5rem 7rem 30rem;
+        grid-template-rows: 27.5rem 7rem 30rem;
     }
     .logo {
         margin-left: -13em;
@@ -283,4 +284,11 @@ img {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}
 

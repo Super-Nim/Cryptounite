@@ -10,9 +10,9 @@ const Footer = () => {
 
 
     return (
-        <IconContext.Provider value={{ size: "2em"}}> 
+        <IconContext.Provider value={{ size: "2em", borderRadius:"50%" }}> 
         <footer>
-        <div class="support">
+        <div className="support">
            <h3>SUPPORT</h3>
             
             <li><a href="#">About Us</a></li>
@@ -20,7 +20,7 @@ const Footer = () => {
             <li><a href="#">Contact Us</a></li>
             
         </div>
-        <div class="community">
+        <div className="community">
             <h3>COMMUNITY</h3>
             
             <li><a href="#">News</a></li>
@@ -29,14 +29,14 @@ const Footer = () => {
             <li><a href="#">Sign Up</a></li>
             
         </div>
-        <div class="social-copyright">
-            <div class="social">
-            <FaFacebook/>
-            <FaInstagram/>
-            <FaTwitter/>
-            <FaLinkedin/>
+        <div className="social-copyright">
+            <div className="social">
+            <button><FaFacebook/></button>
+            <button><FaInstagram/></button>
+            <button><FaTwitter/></button>
+            <button><FaLinkedin/></button>
         </div>
-            <div class="copyright">
+            <div className="copyright">
                 <small>2021 Cryptounite, All Rights Reserved</small>
             </div>
         </div>

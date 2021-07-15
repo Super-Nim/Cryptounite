@@ -100,6 +100,18 @@ a:hover {
     background: var(--blue);
     color: white;
 }
+.banner { /*can make banner bigger later*/
+    display: flex;
+    align-content: flex-start;
+    align-self: flex-start;
+    justify-self: stretch;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 0;
+    background: var(--blue);
+}
 
 @media screen and (max-width: 1060px) {
 
@@ -113,6 +125,7 @@ a:hover {
     }
 
     
+
 
     
 }
@@ -172,6 +185,28 @@ a:hover {
     
     .menu-burger::after {
         transform: translateY(16px);
+    }
+
+   
+
+    .menu-burger-close.menu-burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+
+    }
+
+    .menu-burger-close.menu-burger::before {
+        
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    .menu-burger-close.menu-burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    a {
+        color: white;
     }
 
     
