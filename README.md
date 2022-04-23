@@ -1,15 +1,16 @@
 # Cryptounite App
 
-Learning Full Stack dev + blockchain dev, through my own original HTML/CSS/JS project. Now, using MERN stack + Ethereum Virtual Machine.
+My attempt at combining a DEX and a DAO to provide a transparent donation process. 
 
-Pure CSS is used, as I want to improve my skills. However, frameworks such as MaterialUI/Bootstrap will be applied later.
+Currently build using MERN stack + Solidity.
 
 ## Project Aim
 
 The purpose of this project is to create a MERN stack application that will incorporate smart contracts to distribute money.
 
-This will incorporate the Ethereum Virtual Machine to deploy the application, once the current objectives have been met.
+The DEX will collect a small percentage of trader fees into a pool. This pool's allocation will be decided by a DAO where users can vote for where the money should be allocated to (countries in need), and receive an incentive token if that proposal wins.
 
+This will incorporate the Ethereum Virtual Machine to deploy the application, once the current objectives have been met.
 
 
 ### Current objectives
