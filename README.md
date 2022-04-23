@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Cryptounite App
 
 Learning Full Stack dev + blockchain dev, through my own original HTML/CSS/JS project. Now, using MERN stack + Ethereum Virtual Machine.
@@ -147,4 +146,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> testBranch
