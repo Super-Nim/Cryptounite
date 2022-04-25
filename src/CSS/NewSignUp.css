@@ -1,0 +1,8 @@
+.nameGrid { /*create a gap between first and last name inputs*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.emailInput {
+    width: 100%;
+}
